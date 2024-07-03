@@ -20,14 +20,36 @@
       </fieldset>
       <fieldset>
         <legend>Choose your side</legend>
-        <label for="naruto"><input id="naruto" type="radio">Naruto</label>
-        <label for="one-piece"><input id="one-piece" type="radio">One Piece</label>
+        <label for="naruto"><input id="naruto" type="radio" name="choice" value="1">Naruto</label>
+        <label for="one-piece"><input id="one-piece" type="radio" name="choice" value="2">One Piece</label>
+
+        <label for="checkboxes">Choose your favourite characters (multiple choice):
+          <input type="checkbox" id="naruto" value="1"> <label for="naruto">Naruto</label>
+          <input type="checkbox" id="sasuke" value="2"> <label for="sasuke">Sasuke</label>
+          <input type="checkbox" id="kakashi" value="3"> <label for="kakashi">Kakashi</label>
+          <input type="checkbox" id="itachi" value="4"> <label for="itachi">Itachi</label>
+          <input type="checkbox" id="luffy" value="5"> <label for="luffy">Monkey D. Luffy</label>
+          <input type="checkbox" id="zoro" value="6"> <label for="zoro">Roronoa Zoro</label>
+          <input type="checkbox" id="sanji" value="7"> <label for="sanji">Vinsmoke Sanji</label>
+          <input type="checkbox" id="nami" value="8"> <label for="nami">Nami</label>
+        </label>
+
+        <label for="dropdown">Anime Progress:
+          <select id="dropdown">
+            <option disabled selected value="">Select one</option>
+            <option value="1">I have watched both animes</option>
+            <option value="2">I have only watched my chosen anime</option>
+            <option value="3">I have not watched both animes</option>
+          </select>
+        </label>
+
+        <label>Reason for your choice
+          <textarea id="reason" rows="3" cols="30"></textarea>
+        </label>
+
       </fieldset>
-      <fieldset>
-        <legend>
-          
-        </legend>
-      </fieldset>
+
+       <input type="submit" id="submit" value="Submit" />
     </form>
   </body>
 </html>
