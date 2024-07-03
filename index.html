@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1 id="title">Naruto vs. One Piece: The Ultimate Showdow</h1>
+    <h1 id="title">Naruto vs. One Piece: The Ultimate Showdown</h1>
     <h2>Anime Rivalry Survey</h2>
     <p id="description">Two anime giants collide! Choose your side: ninja villages or pirate crews? The battle rages on! ⚔️🌟</p>
 
@@ -16,26 +16,36 @@
         <legend>About You</legend>
         <label for="name" id="name-label">Name: <input id="name" type="text" required placeholder="Enter name here"></label>
         <label for="email" id="email-label">Email: <input id="email" type="email" required placeholder="Enter email here"></label>
-        <label for="number" id="number-label">Age: <input id="number" type="number" min="7" max="120" placeholder="7+"></label>
+        <label for="number" id="number-label">Age: <input id="number" type="number" min="7" max="120" required placeholder="7+"></label>
       </fieldset>
       <fieldset>
-        <legend>Choose your side</legend>
-        <label for="naruto"><input id="naruto" type="radio" name="choice" value="1">Naruto</label>
-        <label for="one-piece"><input id="one-piece" type="radio" name="choice" value="2">One Piece</label>
+        <legend>Choose your side: Ninjas or Pirates</legend>
+        <div class="container">
+          <div class="box">
+            <label for="naruto"><input class="inline" id="naruto" type="radio" name="choice" value="1"> Naruto</label>
+            <img src="/assets/naruto.jpg">
+          </div>
+          <div class="box">
+            <label for="one-piece"><input class="inline" id="one-piece" type="radio" name="choice" value="2"> One Piece</label>
+            <img src="/assets/onepiece.jpg">
+          </div>
+        </div>
+        
+        
 
         <label for="checkboxes">Choose your favourite characters (multiple choice):
-          <input type="checkbox" id="naruto" value="1"> <label for="naruto">Naruto</label>
-          <input type="checkbox" id="sasuke" value="2"> <label for="sasuke">Sasuke</label>
-          <input type="checkbox" id="kakashi" value="3"> <label for="kakashi">Kakashi</label>
-          <input type="checkbox" id="itachi" value="4"> <label for="itachi">Itachi</label>
-          <input type="checkbox" id="luffy" value="5"> <label for="luffy">Monkey D. Luffy</label>
-          <input type="checkbox" id="zoro" value="6"> <label for="zoro">Roronoa Zoro</label>
-          <input type="checkbox" id="sanji" value="7"> <label for="sanji">Vinsmoke Sanji</label>
-          <input type="checkbox" id="nami" value="8"> <label for="nami">Nami</label>
+          <label for="naruto"><input class="inline" type="checkbox" id="naruto" value="1">Naruto Uzumaki</label>
+          <label for="sasuke"><input class="inline" type="checkbox" id="sasuke" value="2">Sasuke Uchiha</label>
+          <label for="kakashi"><input class="inline" type="checkbox" id="kakashi" value="3">Kakashi Hatake</label>
+          <label for="itachi"><input class="inline" type="checkbox" id="itachi" value="4">Itachi Uchiha</label>
+          <label for="luffy"><input class="inline" type="checkbox" id="luffy" value="5">Monkey D. Luffy</label>
+          <label for="zoro"><input class="inline" type="checkbox" id="zoro" value="6">Roronoa Zoro</label>
+          <label for="sanji"><input class="inline" type="checkbox" id="sanji" value="7">Vinsmoke Sanji</label>
+          <label for="nami"><input class="inline" type="checkbox" id="nami" value="8">Nami</label>
         </label>
 
         <label for="dropdown">Anime Progress:
-          <select id="dropdown">
+          <select id="dropdown" required>
             <option disabled selected value="">Select one</option>
             <option value="1">I have watched both animes</option>
             <option value="2">I have only watched my chosen anime</option>
@@ -44,12 +54,14 @@
         </label>
 
         <label>Reason for your choice
-          <textarea id="reason" rows="3" cols="30"></textarea>
+          <textarea id="reason" rows="3" cols="30" required></textarea>
         </label>
 
       </fieldset>
-
        <input type="submit" id="submit" value="Submit" />
     </form>
   </body>
+  <footer>
+    <p>Created by Camilo Barreto</p>
+  </footer>
 </html>
